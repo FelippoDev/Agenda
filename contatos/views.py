@@ -9,7 +9,7 @@ from django.contrib import messages
 
 def index(request):
     lista_contatos = Contato.objects.order_by(
-        '-id')  ############ .filter(mostrar=True) outro jeito de filtrar oq aparecera no html, em vez de utilizar codigo no html... eu uso no views
+        '-id')
 
     paginator = Paginator(lista_contatos, 3)
 
